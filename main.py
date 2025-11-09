@@ -25,6 +25,7 @@ def handler(event=None, context=None):
             },
         }
     except Exception as e:
+        logger.error("Error", exc_info=True)
         return {
             "status": False,
             "result": {
